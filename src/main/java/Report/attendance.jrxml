@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="012356b7-0c6a-4c31-bd90-73ff46f98991">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select studentID,studentname,subject,week1,week2,week3,week4 from attendance where month='Octomber']]>
+	</queryString>
+	<field name="studentID" class="java.lang.String"/>
+	<field name="studentname" class="java.lang.String"/>
+	<field name="subject" class="java.lang.String"/>
+	<field name="week1" class="java.lang.String"/>
+        <field name="week2" class="java.lang.String"/>
+        <field name="week3" class="java.lang.String"/>
+        <field name="week4" class="java.lang.String"/>
+
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="24" width="260" height="55" uuid="8ad3d426-a4e7-482e-8eb5-0a30a557e742"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attendance Report For Last Month]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="23" width="30" height="20" uuid="5d085ac5-fdc1-4604-a65b-0797a13e670c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="23" width="48" height="20" uuid="98c1ce7c-de72-4b7c-8a8e-e71c6e8e9142"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="23" width="55" height="20" uuid="69d1896b-2c92-46e9-9342-e5a546315785"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="23" width="45" height="20" uuid="bb45c433-c358-424d-8944-3ecd48296d7f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Week 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="23" width="45" height="20" uuid="6d28f109-fbe1-4638-a3dd-2ff3712efbe6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Week 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="23" width="45" height="20" uuid="5f8a9a81-738e-40bd-ae09-1e0b16a09d41"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Week 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="23" width="45" height="20" uuid="92ab93ff-2c08-4f69-a03a-bdee67ebc24d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Week 4]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="30" width="100" height="20" uuid="96043e10-8e06-4b08-ac46-70a362741682"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="30" width="106" height="20" uuid="f46f869b-7759-434c-9678-abdb74744089"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="30" width="75" height="20" uuid="0aacf3ba-db7c-41e8-9fc3-db1035babbf9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="30" width="60" height="20" uuid="3ff0b35b-a964-4581-b9de-f948379dd9bc"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{week1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="30" width="60" height="20" uuid="5f21c97f-a714-4f1a-be00-ce0544d5059f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{week2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="30" width="60" height="20" uuid="f4eb4374-e64e-4847-b346-e78525d3c48c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{week3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="30" width="46" height="20" uuid="213a8b8e-4e84-4294-9280-8a7adb7facdf"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{week4}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
